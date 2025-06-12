@@ -8,6 +8,8 @@ As this is for quick development and testing, the template files will be a littl
 - `VSCode` will prompt you to open the project in a container if it detects the `.devcontainer` folder
 - Both `.vscode` and `.devcontainer` folders are read in a web-based `codespace`
   - In `.devcontainer.json`, "forwardPorts": [5500] is not about Live Server settings, but about telling Codespaces or `VSCode` to forward that container port to your local/machine UI so the browser can access it. `.vscode/settings.json` configures `Live Server` to use port 5500
+- Remember to change settings to make repository a template
+- Use this template, open in a codespace
 
 # Repository Structure
 ```text
