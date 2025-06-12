@@ -1,6 +1,7 @@
 # Quick Start
-1. Clone the repository, see [Cloning](#cloning-this-template)  
-2. Open the server via one of the methods below
+1. Clone the repository, see [Cloning](#cloning-this-template)
+2. Run `npm install` to install all dependencies in `package.json`
+3. Open the server via one of the methods below
     - **Live Server Extension**: Click the button in the bottom right that says "Go Live" or right-click `index.html` and choose "Open with Live Server" and then navigate to `http://localhost:5500`
     - **HTTP Server**: Run `http-server docs -p 8080` in terminal to serve the `docs` directory, or `http-server -p 8080` for the current directory, and then navigate to `http://localhost:8080`
 3. Make changes and you should see them update via the `localhost` address
@@ -34,8 +35,12 @@ template-codespaces-html/
   │   └─ style.css
   │
   ├─ .gitignore
+  ├─ package.json
   └─ README.md
 ```
+
+## `package.json`
+Specifies dependencies for the project, you can install them via `npm install` in the directory that contains `package.json`
 
 ## `.devcontainer/`
 Contains configuration for `GitHub Codespaces` and `VSCode Dev Containers`
@@ -47,8 +52,6 @@ Contains configuration for `GitHub Codespaces` and `VSCode Dev Containers`
     - Automatically installs `ritwickdey.LiveServer`
 - Automatically forwards ports for use as local development server
     - Automatically forwards `port 5500` which is the default for `LiveServer`
-- Runs "post-creation" commands via `postCreateCommand` to install additional tools using `npm`
-    - Installs `http-server`, as an alternative to `LiveServer`
 
 ## `.vscode/`
 Contains project/workspace-specific `VSCode` settings that take precedence over current settings and work when the project is cloned locally or within `GitHub Codespaces`
@@ -82,7 +85,7 @@ As this is for quick development and testing, the template files will be a littl
 ## Issues
 
 > [!WARNING]
-> There is an issue with the current implementation of the `postCreateCommand` and `postStartCommand`
+> There is an issue with the current implementation of the `postCreateCommand` and `postStartCommand`. It was intended to install `http-server`, as an alternative to `LiveServer`. But this is now best done via `npm install http-server` or simply `npm install` which will use `package.json` for install information
 
 # Repository Metadata
 
