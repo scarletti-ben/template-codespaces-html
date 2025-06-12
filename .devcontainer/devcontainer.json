@@ -12,9 +12,11 @@
     5500
   ],
   "postCreateCommand": [
-    "npm install -g http-server"
+    "npm install -g http-server",
+    "npm install http-server"
   ],
   "postStartCommand": [
-    "npm install -g http-server"
+    "npm install -g http-server",
+    "npm install http-server"
   ]
 }
