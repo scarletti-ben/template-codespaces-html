@@ -11,12 +11,16 @@
   "forwardPorts": [
     5500
   ],
-  "postCreateCommand": [
-    "npm install -g http-server",
-    "npm install http-server"
-  ],
-  "postStartCommand": [
-    "npm install -g http-server",
-    "npm install http-server"
-  ]
+    "postCreateCommand": [
+      "npm install -g http-server",
+      "npm install http-server",
+      "npm install -g http-server || tail -n 20 ~/.npm/_logs/*.log",
+      "npm install http-server || tail -n 20 ~/.npm/_logs/*.log"
+    ],
+    "postStartCommand": [
+      "npm install -g http-server",
+      "npm install http-server",
+      "npm install -g http-server || tail -n 20 ~/.npm/_logs/*.log",
+      "npm install http-server || tail -n 20 ~/.npm/_logs/*.log"
+    ]
 }
