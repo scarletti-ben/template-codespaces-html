@@ -1,0 +1,14 @@
+{
+  "name": "template-codespaces-html",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.LiveServer"
+      ]
+    }
+  },
+  "forwardPorts": [
+    5500
+  ]
+}
