@@ -73,6 +73,8 @@ As this is for quick development and testing, the template files will be a littl
 - `VSCode` will prompt you to open the project in a container if it detects the `.devcontainer` folder
 
 # Repository Metadata
+
+```yaml
 ---
 metadata:
   author: "Ben Scarletti"
@@ -83,3 +85,4 @@ metadata:
     "dev", "webdev", "programming", "coding", "html", "css", "javascript", "github", "codespaces", "template"
   ]
 ---
+```
