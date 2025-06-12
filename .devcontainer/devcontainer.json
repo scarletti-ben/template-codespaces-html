@@ -14,13 +14,11 @@
     "postCreateCommand": [
       "npm install -g http-server",
       "npm install http-server",
-      "npm install -g http-server || tail -n 20 ~/.npm/_logs/*.log",
-      "npm install http-server || tail -n 20 ~/.npm/_logs/*.log"
+      "echo 'test create'"
     ],
     "postStartCommand": [
       "npm install -g http-server",
       "npm install http-server",
-      "npm install -g http-server || tail -n 20 ~/.npm/_logs/*.log",
-      "npm install http-server || tail -n 20 ~/.npm/_logs/*.log"
+      "echo 'test start'"
     ]
 }
