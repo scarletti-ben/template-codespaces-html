@@ -79,6 +79,11 @@ As this is for quick development and testing, the template files will be a littl
 - Under the green `Code` button on `GitHub` you can see all `codespaces` that are linked to a given repository, and turn them into real repositories if you want
 - Opening this repository as a `codespace` is different from clicking the button "use this template" and selecting "open in a codesapce" as it will open the exact repository, not a clone
 
+## Issues
+
+> [!WARNING]
+> There is an issue with the current implementation of the `postCreateCommand` and `postStartCommand`
+
 # Repository Metadata
 
 ```yaml
