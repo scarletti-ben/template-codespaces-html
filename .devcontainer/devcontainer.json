@@ -10,5 +10,9 @@
   },
   "forwardPorts": [
     5500
+  ],
+  "postCreateCommand": [
+    "npm install -g http-server",
+    "echo 'Setup complete'"
   ]
 }
