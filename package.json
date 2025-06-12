@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "http-server": "latest"
+  },
+  "scripts": {
+    "start": "http-server docs -p 8080"
   }
 }

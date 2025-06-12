@@ -3,10 +3,13 @@
 2. Run `npm install` to install all dependencies in `package.json`
 3. Open the server via one of the methods below
     - **Live Server Extension**: Click the button in the bottom right that says "Go Live" or right-click `index.html` and choose "Open with Live Server" and then navigate to `http://localhost:5500`
-    - **HTTP Server**: Run `http-server docs -p 8080` in terminal to serve the `docs` directory, or `http-server -p 8080` for the current directory, and then navigate to `http://localhost:8080`
+    - **HTTP Server**: Run `npm start` or `npx http-server docs -p 8080` in terminal to serve the `docs` directory, or `npx http-server -p 8080` for the current directory, and then navigate to `http://localhost:8080`
 3. Make changes and you should see them update via the `localhost` address
 
-If there is an issue with setup, the best method is to install `http-server` manually via `npm` using `npm install -g http-server`, and then you can run `http-server docs -p 8080` or `http-server -p 8080` as above.
+If there is an issue with setup, the best method is to install `http-server` manually via `npm` using `npm install -g http-server`, and then you can run `npx http-server docs -p 8080` or `npx http-server -p 8080` as above.
+
+> [!NOTE]
+> Using `npx` in `npx http-server -p 8080` is the simplest way to avoid situations where `http-server` is only accessible locally rather than globally. `Node Package Execute` / `npx` should search locally, then globally, and then 
 
 # Cloning this Template
 As this repository is a template repository it has a button on the right of its page that says "use this template", which gives two options, "create a new repository" and "open in a codespace".
@@ -40,7 +43,7 @@ template-codespaces-html/
 ```
 
 ## `package.json`
-Specifies dependencies for the project, you can install them via `npm install` in the directory that contains `package.json`
+Specifies dependencies for the project, you can install them via `npm install` in the directory that contains `package.json`. These dependencies will be installed locally, which means that you will need to use the `npx` prefix in order to run them. The "scripts" section of `package.json` allows to to specify commands that can be called via `npm {command}`. In this project `npm run start` will start a server on `port 8080`, just make sure that `npm install` has been called first.
 
 ## `.devcontainer/`
 Contains configuration for `GitHub Codespaces` and `VSCode Dev Containers`
