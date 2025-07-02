@@ -37,6 +37,19 @@ template-codespaces-html/
   │   └─ settings.json
   │
   ├─ docs/
+  │   ├─ assets/
+  │   │   ├─ documents/
+  │   │   ├─ fonts/
+  │   │   ├─ icons/
+  │   │   ├─ images/
+  │   │   └─ other/
+  │   │
+  │   ├─ components/
+  │   ├─ data/
+  │   ├─ external/
+  │   ├─ utils/
+  │   │   └─ my-tools.js
+  │   │
   │   ├─ index.html
   │   ├─ script.js
   │   └─ style.css
