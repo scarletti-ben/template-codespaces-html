@@ -59,6 +59,9 @@ template-codespaces-html/
   └─ README.md
 ```
 
+> [!NOTE]
+> There are `.placeholder` files in some directories just to stop `GitHub` from ignoring those empty directories. You can remove the `.placeholder` file if you populate one of the empty directories with files.
+
 ## `package.json`
 Specifies dependencies for the project, you can install them via `npm install` in the directory that contains `package.json`. These dependencies will be installed locally, which means that you will need to use the `npx` prefix in order to run them. The "scripts" section of `package.json` allows to to specify commands that can be called via `npm {command}`. In this project `npm run start` will start a server on `port 8080`, just make sure that `npm install` has been called first. The "engines" field specifies `node` version for the project.
 
