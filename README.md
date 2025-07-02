@@ -1,15 +1,19 @@
-# Quick Start
-1. Clone the repository, see [Cloning](#cloning-this-template)
-2. Run `npm install` to install all dependencies in `package.json`
-3. Open the server via one of the methods below
+# Quick Start for Local Machine
+1. [Clone](#cloning-this-template) the repository
+2. Ensure `Node` version matches project version specified in `.node-version`
+  - Check `Node` version in `package.json` and manually enter a compatible version eg. `nvm use 18.14.0`
+  - You can check your current `Node` version via `node --version`
+3. Run `npm install` to install all dependencies in `package.json`
+4. Open the server via one of the methods below
     - **Live Server Extension**: Click the button in the bottom right that says "Go Live" or right-click `index.html` and choose "Open with Live Server" and then navigate to `http://localhost:5500`
     - **HTTP Server**: Run `npm start` or `npx http-server docs -p 8080` in terminal to serve the `docs` directory, or `npx http-server -p 8080` for the current directory, and then navigate to `http://localhost:8080`
-3. Make changes and you should see them update via the `localhost` address
+    - **Python HTTP Server**: Run `python -m http.server 8000 --directory docs` in terminal to serve the `docs` directory, or `python -m http.server 8000` fir the current directory and navigate to `http://localhost:8000`
+5. Make changes and you should see them update via the `localhost` address
 
-If there is an issue with setup, the best method is to install `http-server` manually via `npm` using `npm install -g http-server`, and then you can run `npx http-server docs -p 8080` or `npx http-server -p 8080` as above.
+If there is an issue with setup, the best method is to install `http-server` locally via `npm` using `npm install http-server`, and then you can run `npx http-server` as above.
 
 > [!NOTE]
-> Using `npx` in `npx http-server -p 8080` is the simplest way to avoid situations where `http-server` is only accessible locally rather than globally. `Node Package Execute` / `npx` should search locally, then globally, and then 
+> Using `npx` in `npx http-server` is the simplest way to avoid situations where `http-server` is only accessible locally rather than globally. `npx` (`Node Package Execute`) should search locally, then globally, and then search online.
 
 # Cloning this Template
 As this repository is a template repository it has a button on the right of its page that says "use this template", which gives two options, "create a new repository" and "open in a codespace".
@@ -43,10 +47,13 @@ template-codespaces-html/
 ```
 
 ## `package.json`
-Specifies dependencies for the project, you can install them via `npm install` in the directory that contains `package.json`. These dependencies will be installed locally, which means that you will need to use the `npx` prefix in order to run them. The "scripts" section of `package.json` allows to to specify commands that can be called via `npm {command}`. In this project `npm run start` will start a server on `port 8080`, just make sure that `npm install` has been called first.
+Specifies dependencies for the project, you can install them via `npm install` in the directory that contains `package.json`. These dependencies will be installed locally, which means that you will need to use the `npx` prefix in order to run them. The "scripts" section of `package.json` allows to to specify commands that can be called via `npm {command}`. In this project `npm run start` will start a server on `port 8080`, just make sure that `npm install` has been called first. The "engines" field specifies `node` version for the project.
+
+## `.nvmrc` [Not Included]
+Optional file that contains the `Node` version to use for the project, see [Quickstart](#quick-start) for more information. Created via `node -v > .nvmrc`. If you are not using `Windows` then chances are you can just try `nvm use` and it will read from `.nvmrc`.
 
 ## `.devcontainer/`
-Contains configuration for `GitHub Codespaces` and `VSCode Dev Containers`
+Contains configuration for `GitHub Codespaces` and `VSCode Dev Containers`, including the `Node` version image `"image": "mcr.microsoft.com/devcontainers/javascript-node:18"`, which ensures `Node v18` is preinstalled. This version specification actually matters whereas the "engines" field, and `"node": ">=18"`, in `package.json` is more for human reference, though may cause warnings to arise from some tools.
 
 ### `devcontainer.json`
 - Defines container image via `"image"`
@@ -81,26 +88,27 @@ As this is for quick development and testing, the template files will be a littl
 
 ## Other
 - Does not make use of a `Dockerfile`
-- `VSCode` will prompt you to open the project in a container if it detects the `.devcontainer` folder
+- `VSCode` will prompt you to open the project in a container if it detects the `.devcontainer` folder, it is not entirely necessary if your local environment doesn't require it, or doesn't have `Docker` installed
 - Under the green `Code` button on `GitHub` you can see all `codespaces` that are linked to a given repository, and turn them into real repositories if you want
 - Opening this repository as a `codespace` is different from clicking the button "use this template" and selecting "open in a codesapce" as it will open the exact repository, not a clone
 
 ## Issues
-
 > [!WARNING]
 > There is an issue with the current implementation of the `postCreateCommand` and `postStartCommand`. It was intended to install `http-server`, as an alternative to `LiveServer`. But this is now best done via `npm install http-server` or simply `npm install` which will use `package.json` for install information
 
 # Repository Metadata
-
 ```yaml
 ---
-metadata:
-  author: "Ben Scarletti"
-  date-created: "2025-06-12"
-  date-modified: "2025-06-12"
-  description: "Template for web development with vanilla HTML / CSS / JavaScript using GitHub Codespaces"
-  tags: [
-    "dev", "webdev", "programming", "coding", "html", "css", "javascript", "github", "codespaces", "template"
-  ]
+title: "Template - Codespaces HTML"
+date: "2025-07-02"
+# last_modified_at: "2025-07-02"
+description: "Template for web development with vanilla HTML / CSS / JavaScript using GitHub Codespaces"
+categories: [
+  miscellaneous
+]
+tags: [
+  dev, webdev, programming, coding, html, css, javascript, github, codespaces, template
+]
+creator: Ben Scarletti
 ---
 ```
