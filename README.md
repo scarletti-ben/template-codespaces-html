@@ -1,8 +1,8 @@
 # Quick Start for Local Machine
 1. [Clone](#cloning-this-template) the repository
 2. Ensure `Node` version matches project version specified in `.node-version`
-  - Check `Node` version in `package.json` and manually enter a compatible version eg. `nvm use 18.14.0`
-  - You can check your current `Node` version via `node --version`
+    - Check `Node` version in `package.json` and manually enter a compatible version eg. `nvm use 18.14.0`
+    - You can check your current `Node` version via `node --version`
 3. Run `npm install` to install all dependencies in `package.json`
 4. Open the server via one of the methods below
     - **Live Server Extension**: Click the button in the bottom right that says "Go Live" or right-click `index.html` and choose "Open with Live Server" and then navigate to `http://localhost:5500`
