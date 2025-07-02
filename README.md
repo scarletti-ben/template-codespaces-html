@@ -7,7 +7,7 @@
 4. Open the server via one of the methods below
     - **Live Server Extension**: Click the button in the bottom right that says "Go Live" or right-click `index.html` and choose "Open with Live Server" and then navigate to `http://localhost:5500`
     - **HTTP Server**: Run `npm start` or `npx http-server docs -p 8080` in terminal to serve the `docs` directory, or `npx http-server -p 8080` for the current directory, and then navigate to `http://localhost:8080`
-    - **Python HTTP Server**: Run `python -m http.server 8000 --directory docs` in terminal to serve the `docs` directory, or `python -m http.server 8000` fir the current directory and navigate to `http://localhost:8000`
+    - **Python HTTP Server**: Run `python -m http.server 8000 --directory docs` in terminal to serve the `docs` directory, or `python -m http.server 8000` for the current directory and navigate to `http://localhost:8000`
 5. Make changes and you should see them update via the `localhost` address
 
 If there is an issue with setup, the best method is to install `http-server` locally via `npm` using `npm install http-server`, and then you can run `npx http-server` as above.
