@@ -9,6 +9,9 @@
     - **HTTP Server**: Run `npm start` or `npx http-server docs -p 8080` in terminal to serve the `docs` directory, or `npx http-server -p 8080` for the current directory, and then navigate to `http://localhost:8080`
     - **Python HTTP Server**: Run `python -m http.server 8000 --directory docs` in terminal to serve the `docs` directory, or `python -m http.server 8000` for the current directory and navigate to `http://localhost:8000`
 5. Make changes and you should see them update via the `localhost` address
+    - For `Live Server` these changes should be immediate
+    - For the other methods you may need to reload the page to see changes
+    - To effectively disable the caching system for `HTTP Server` you can use `-c-1` as in `npx http-server -c-1 docs -p 8080`
 
 If there is an issue with setup, the best method is to install `http-server` locally via `npm` using `npm install http-server`, and then you can run `npx http-server` as above.
 
